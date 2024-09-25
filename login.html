@@ -23,9 +23,22 @@
                         <p>Not your computer? Use Guest mode to sign in privately.</p>
                         <a href="#">Learn more about using Guest mode</a>
                     </div>
+
+                    <!-- Buttons section -->
                     <div class="buttons">
-                        <a href="create-account.html" class="create-account">Create account</a>
+                        <a href="#" class="create-account" onclick="showAccountTypeDropdown(event)">Create account</a>
                         <button type="submit" class="next-button">Next</button>
+                    </div>
+
+                    <!-- Account Type Dropdown (Initially Hidden) -->
+                    <div class="account-type-dropdown" id="account-type-dropdown">
+                        <label for="account-type">Choose Account Type:</label>
+                        <select id="account-type" onchange="navigateToCreateAccount()">
+                            <option value="" disabled selected>Select account type</option>
+                            <option value="personal">For my personal use</option>
+                            <option value="child">For my child</option>
+                            <option value="business">For work or my business</option>
+                        </select>
                     </div>
                 </form>
             </div>
@@ -55,5 +68,34 @@
             </div>
         </div>
     </footer>
+
+    <footer1 class="footer1">
+        <div class="footer1-content">
+            <p>Designed and customised by <strong>Festo Wampamba</strong>, All rights reserved © 2024</p>
+        </div>
+    </footer1>
+
+    <!-- JavaScript to handle the dropdown and navigation -->
+    <script>
+        function showAccountTypeDropdown(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var dropdown = document.getElementById('account-type-dropdown');
+            dropdown.style.display = 'block'; // Show the dropdown
+        }
+
+        function navigateToCreateAccount() {
+            var accountType = document.getElementById("account-type").value;
+            if (accountType) {
+                // Redirect based on account type (modify URLs accordingly)
+                if (accountType === "personal") {
+                    window.location.href = "create-account-personal.html";
+                } else if (accountType === "child") {
+                    window.location.href = "create-account-child.html";
+                } else if (accountType === "business") {
+                    window.location.href = "create-account-business.html";
+                }
+            }
+        }
+    </script>
 </body>
 </html>

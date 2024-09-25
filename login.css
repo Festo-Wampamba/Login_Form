@@ -142,3 +142,42 @@ input[type="password"] {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/* Footer Styles */
+.footer1 {
+    background-color: #1a73e8; /* A nice, professional blue background */
+    padding: 20px 0; /* Space around the content */
+    text-align: center;
+    border-top: 1px solid #dadce0;
+    color: white; /* White text for contrast against the blue */
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer1-content {
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center content */
+    padding: 0 20px; /* Padding for small screens */
+}
+
+.footer1-content p {
+    font-size: 14px; /* Readable text size */
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Ensures the text color contrasts well */
+}
+
+.footer1-content strong {
+    color: #ffcc00; /* Highlight Festo Wampamba in gold for emphasis */
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+    .footer-content1 p {
+        font-size: 12px; /* Slightly smaller text on mobile screens */
+    }
+}
+
